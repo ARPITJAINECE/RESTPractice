@@ -60,18 +60,34 @@ public class StudentRestController {
 		return theStudents.get(studentdId);
 	}
 
-	// Add an exeption handler using @ExceptionHandler
-	@ExceptionHandler
-	public ResponseEntity<StudentErrorResponse> handleException(StudentNotFoundException exc) {
+	// just commenting the lower part, as we are defining the global exception
 
-		// creating a Student Error Response
-		StudentErrorResponse error = new StudentErrorResponse();
-		error.setStatus(HttpStatus.NOT_FOUND.value());
-		error.setMessage(exc.getMessage());
-		error.setTimeStamp(System.currentTimeMillis());
+	// Add an exception handler using @ExceptionHandler
+//	@ExceptionHandler
+//	public ResponseEntity<StudentErrorResponse> handleException(StudentNotFoundException exc) {
+//
+//		// creating a Student Error Response
+//		StudentErrorResponse error = new StudentErrorResponse();
+//		error.setStatus(HttpStatus.NOT_FOUND.value());
+//		error.setMessage(exc.getMessage());
+//		error.setTimeStamp(System.currentTimeMillis());
+//
+//		// returning the ResponseEntity
+//		return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
+//	}
 
-		// returning the ResponseEntity
-		return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
-	}
+	// Add an exception handler to catch any type of exception (CATCH ALL)
+//	@ExceptionHandler
+//	public ResponseEntity<StudentErrorResponse> handleException(Exception exc) {
+//
+//		// creating a Student error response
+//		StudentErrorResponse error = new StudentErrorResponse();
+//		error.setStatus(HttpStatus.BAD_REQUEST.value());
+//		error.setMessage(exc.getMessage());
+//		error.setTimeStamp(System.currentTimeMillis());
+//
+//		// returning the student error response
+//		return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
+//	}
 
 }
