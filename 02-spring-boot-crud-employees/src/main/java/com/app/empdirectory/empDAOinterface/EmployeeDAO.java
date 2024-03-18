@@ -7,4 +7,10 @@ import com.app.empdirectory.entity.Employee;
 public interface EmployeeDAO {
 
 	public List<Employee> findAll();
+
+	public Employee findById(int theId);
+
+	public Employee save(Employee newEmployee);
+
+	public void deleteById(int theID);
 }
