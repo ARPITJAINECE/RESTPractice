@@ -69,7 +69,7 @@ public class EmployeeRestController {
 
 	// add mapping for DELETE "/employees/{employeeID}" for deleting a particular
 	// employee
-	@DeleteMapping("/employee/{employeeId}")
+	@DeleteMapping("/employees/{employeeId}")
 	public String deleteEmpByID(@PathVariable int employeeId) {
 		Employee deleteingEmployee = employeeServive.findById(employeeId);
 
