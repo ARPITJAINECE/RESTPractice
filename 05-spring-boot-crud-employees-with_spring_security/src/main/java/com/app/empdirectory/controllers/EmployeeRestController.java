@@ -73,7 +73,7 @@ public class EmployeeRestController {
 	public String deleteEmpByID(@PathVariable int employeeId) {
 		Employee deleteingEmployee = employeeServive.findById(employeeId);
 
-		// throw exception if employee is not fou8nd!!!
+		// throw exception if employee is not found!!!
 		if (deleteingEmployee == null) {
 			throw new RuntimeException("employee with the given id is not found : \" + employeeId");
 		}
