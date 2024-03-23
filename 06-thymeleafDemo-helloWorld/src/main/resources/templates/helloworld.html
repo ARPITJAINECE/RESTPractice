@@ -5,11 +5,11 @@
 <title>Thymeleaf DEMO</title>
 </head>
 
-<!-- reference CSS files -->
-<link rel="stylesheet" th:href="@{/css/demo.css}"></link>
 
 <body>
-	<p th:text="'Time on the SERVER is : ' + ${theDate}" class="funny"></p>
+	Hello World Spring!!
+	<br></br> Student Name :
+	<span th:text="${param.studentName}"></span>
 </body>
 
 </html>
