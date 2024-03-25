@@ -17,8 +17,12 @@
 				th:value="${tempCountry}" th:text="${tempCountry}">
 		</select> <br></br> Favorite Programming Language : <input type="radio"
 			th:field="*{favoriteLanguage}" th:each="tempLang : ${languages}"
-			th:value="${tempLang}" th:text="${tempLang}" /> <br></br> <input
-			type="submit" value="submit" />
+			th:value="${tempLang}" th:text="${tempLang}" /> <br></br> <br></br>
+
+		Favorite OS: <input type="checkbox" th:field="*{favoriteSystems}"
+			th:each="tempSystem : ${systems}" th:value="${tempSystem}"
+			th:text="${tempSystem}"></input> <br></br> <input type="submit"
+			value="submit" />
 	</form>
 </body>
 
