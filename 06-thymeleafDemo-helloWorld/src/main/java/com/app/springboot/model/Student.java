@@ -3,6 +3,7 @@ package com.app.springboot.model;
 public class Student {
 	private String firstName;
 	private String lastName;
+	private String country;
 
 	public Student() {
 		// TODO Auto-generated constructor stub
@@ -30,4 +31,11 @@ public class Student {
 		this.lastName = lastName;
 	}
 
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
 }
